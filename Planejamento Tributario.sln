@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planejamento Tributario", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{A0F5EE66-E4BB-4A5A-91C8-2F7F6B2A0151}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{F3946279-2A54-45C6-A3B3-416F29DEC388}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{137503D2-7471-4F17-9FBA-E853D34CCEAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A0F5EE66-E4BB-4A5A-91C8-2F7F6B2A0151}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0F5EE66-E4BB-4A5A-91C8-2F7F6B2A0151}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0F5EE66-E4BB-4A5A-91C8-2F7F6B2A0151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3946279-2A54-45C6-A3B3-416F29DEC388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3946279-2A54-45C6-A3B3-416F29DEC388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3946279-2A54-45C6-A3B3-416F29DEC388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3946279-2A54-45C6-A3B3-416F29DEC388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137503D2-7471-4F17-9FBA-E853D34CCEAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137503D2-7471-4F17-9FBA-E853D34CCEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137503D2-7471-4F17-9FBA-E853D34CCEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137503D2-7471-4F17-9FBA-E853D34CCEAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

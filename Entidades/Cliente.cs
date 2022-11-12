@@ -4,7 +4,7 @@ namespace Entidades
 {
     public class Cliente
     {
-        public Guid IdClliente { get; set; }    
+        public Guid IdCliente { get; set; }    
         public string NomeCliente { get; set; }
         public string DocumentoCliente { get; set; }    
     }
