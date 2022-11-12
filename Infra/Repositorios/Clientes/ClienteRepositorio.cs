@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Infra.Repositorios
+namespace Infra.Repositorios.Clientes
 {
     public class ClienteRepositorio : IClienteRepositorio
     {
@@ -17,7 +17,7 @@ namespace Infra.Repositorios
         {
             var clienteRemover = ClientesMock.FirstOrDefault(c => c.IdCliente == cliente.IdCliente);
 
-            ClientesMock.Remove(clienteRemover);    
+            ClientesMock.Remove(clienteRemover);
 
             ClientesMock.Add(cliente);
         }

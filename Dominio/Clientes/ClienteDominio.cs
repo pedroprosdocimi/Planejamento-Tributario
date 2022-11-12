@@ -1,6 +1,6 @@
 ﻿using Dominio.Clientes.Interfaces;
 using Entidades;
-using Infra.Repositorios;
+using Infra.Repositorios.Clientes;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
