@@ -11,6 +11,10 @@ namespace Dominio.Clientes
     {
         private IClienteRepositorio _clienteRepositorio;
 
+        public ClienteDominio()
+        {
+        }
+
         public ClienteDominio(IClienteRepositorio clienteRepositorio)
         {
             _clienteRepositorio = clienteRepositorio;

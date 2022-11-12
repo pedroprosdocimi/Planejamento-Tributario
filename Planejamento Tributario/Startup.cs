@@ -2,8 +2,11 @@ using Dominio.Clientes;
 using Dominio.Clientes.Interfaces;
 using Dominio.PlanejamentosTributarios;
 using Dominio.PlanejamentosTributarios.Interfaces;
+using Dominio.Simuladas;
+using Dominio.Simuladas.Interfaces;
 using Infra.Repositorios.Clientes;
 using Infra.Repositorios.PlanejamentosTributarios;
+using Infra.Repositorios.Simuladas;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
@@ -60,6 +63,8 @@ namespace Planejamento_Tributario
             services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
             services.AddScoped<IPlanejamentoTributarioDominio, PlanejamentoTributarioDominio>();
             services.AddScoped<IPlanejamentoTributarioRepositorio, PlanejamentoTributarioRepositorio>();
+            services.AddScoped<ISimuladaDominio, SimuladaDominio>();
+            services.AddScoped<ISimuladaRepositorio, SimuladaRepositorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
