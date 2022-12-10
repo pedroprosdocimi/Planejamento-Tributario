@@ -32,10 +32,6 @@ namespace Planejamento_Tributario.Controllers
             {
                 await _clienteDominio.CriarCliente(cliente.ParaEntidade());
 
-                var a = new Simulada();
-
-                string jsonString = JsonSerializer.Serialize(a);
-
                 return Ok();
             }
             catch
