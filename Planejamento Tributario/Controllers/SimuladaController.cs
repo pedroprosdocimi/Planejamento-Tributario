@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 namespace Planejamento_Tributario.Controllers
 {
     [ApiController]
-    [Route("/simuladas")]
     public class SimuladasController : ControllerBase
     {
         private readonly ILogger<SimuladasController> _logger;
@@ -24,7 +23,7 @@ namespace Planejamento_Tributario.Controllers
         }
 
         [HttpPost]
-        [Route("/criar")]
+        [Route("/Simulada/Criar")]
         [ProducesResponseType(typeof(Nullable), StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> CriarSimulada([FromBody] Simulada simulada)

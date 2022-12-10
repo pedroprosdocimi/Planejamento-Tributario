@@ -22,7 +22,7 @@ namespace Infra.Repositorios.Simuladas
             throw new NotImplementedException();
         }
 
-        public Task<bool> VerificaSeJaExisteSimulada(Guid planejamentoTributario, int mesReferencia, int anoReferencia)
+        public Task<bool> VerificaSeJaExisteSimulada(int planejamentoTributario, int mesReferencia, int anoReferencia)
         {
             throw new NotImplementedException();
         }

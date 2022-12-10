@@ -4,8 +4,8 @@ namespace Entidades
 {
     public class Simulada
     {      
-        public Guid IdCliente { get; set; }
-        public Guid IdPlanejamentoTributario { get; set; }
+        public int IdCliente { get; set; }
+        public int IdPlanejamentoTributario { get; set; }
         public int MesReferencia { get; set; }
         public int AnoReferencia { get; set; }
 

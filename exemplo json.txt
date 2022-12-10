@@ -1,0 +1,19 @@
+{
+  "IdCliente": 0,
+  "IdPlanejamentoTributario": 0,
+  "MesReferencia": 0,
+  "AnoReferencia": 0,
+  "ServicosPrestados": 0,
+  "DescontosIncondicionais": 0,
+  "VendasCanceladas": 0,
+  "CustoOperacional": 0,
+  "DespesasPrestacaoServico": 0,
+  "DespesasAdministrativas": 0,
+  "DespesasTributarias": 0,
+  "DespesasFinanceiras": 0,
+  "ReceitasFinanceiras": 0,
+  "GanhosCapitalVendaAtivoPermanente": 0,
+  "ReceitasNaoOperacionais": 0,
+  "ProvisaoIRPJ": 0,
+  "ProvisaoContribuicaoSocial": 0
+}

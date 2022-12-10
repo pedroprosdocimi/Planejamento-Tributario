@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Planejamento_Tributario.Controllers
 {
     [ApiController]
-    [Route("/clientes")]
     public class ClientesController : ControllerBase
     {
         private readonly ILogger<ClientesController> _logger;
@@ -23,14 +23,19 @@ namespace Planejamento_Tributario.Controllers
         }
 
         [HttpPost]
-        [Route("/criar")]
+        [Route("Clientes/Criar")]
         [ProducesResponseType(typeof(Nullable), StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> CriarNovoCliente([FromBody] Cliente cliente)
+        public async Task<IActionResult> CriarNovoCliente([FromBody] ClienteRequisicao cliente)
         {
             try
             {
-                await _clienteDominio.CriarCliente(cliente);
+                await _clienteDominio.CriarCliente(cliente.ParaEntidade());
+
+                var a = new Simulada();
+
+                string jsonString = JsonSerializer.Serialize(a);
+
                 return Ok();
             }
             catch
@@ -40,7 +45,7 @@ namespace Planejamento_Tributario.Controllers
         }
 
         [HttpGet]
-        [Route("{idCliente}")]
+        [Route("/Cliente/{idCliente}")]
         [ProducesResponseType(typeof(Cliente), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Nullable), StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -59,7 +64,7 @@ namespace Planejamento_Tributario.Controllers
         }
 
         [HttpGet]
-        [Route("")]
+        [Route("/Cliente")]
         [ProducesResponseType(typeof(List<Cliente>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> ListarClientes()
@@ -77,6 +82,7 @@ namespace Planejamento_Tributario.Controllers
         }
 
         [HttpPut]
+        [Route("/Cliente/Atualizar")]
         [ProducesResponseType(typeof(Nullable), StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> AtualizarCliente([FromBody] Cliente cliente)

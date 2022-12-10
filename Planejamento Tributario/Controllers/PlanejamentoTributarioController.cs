@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 namespace Planejamento_Tributario.Controllers
 {
     [ApiController]
-    [Route("/planejamento-tributario")]
     public class PlanejamentoTributarioController : ControllerBase
     {
         private readonly ILogger<PlanejamentoTributarioController> _logger;
@@ -23,7 +22,7 @@ namespace Planejamento_Tributario.Controllers
         }
 
         [HttpPost]
-        [Route("/criar")]
+        [Route("/PlanejamentoTributario/Criar")]
         [ProducesResponseType(typeof(Nullable), StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> CriarNovoPlanejamentoTributario([FromBody] PlanejamentoTributario planejamentoTributario)
@@ -40,7 +39,7 @@ namespace Planejamento_Tributario.Controllers
         }
 
         [HttpGet]
-        [Route("{idPlanejamentoTributario}")]
+        [Route("/PlanejamentoTributario/{idPlanejamentoTributario}")]
         [ProducesResponseType(typeof(PlanejamentoTributario), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Nullable), StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -59,7 +58,7 @@ namespace Planejamento_Tributario.Controllers
         }
 
         [HttpGet]
-        [Route("")]
+        [Route("/PlanejamentoTributario/{idCliente}")]
         [ProducesResponseType(typeof(List<PlanejamentoTributario>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> ListarPlanejamentoTributario(Guid idCliente)
@@ -77,6 +76,7 @@ namespace Planejamento_Tributario.Controllers
         }
 
         [HttpPut]
+        [Route("/PlanejamentoTributario/Atualizar")]
         [ProducesResponseType(typeof(Nullable), StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> AtualizarPlanejamentoTributario([FromBody] PlanejamentoTributario planejamentoTributario)
